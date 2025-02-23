@@ -31,11 +31,3 @@ class Cart:
         else:
             return "Кошик порожній."
         
-        
-        
-cart = Cart("Олександр")
-cart.add_item("Ноутбук")
-cart.add_item("Смартфон")
-cart.show_cart()
-cart.remove_item("Ноутбук")
-cart.show_cart()
