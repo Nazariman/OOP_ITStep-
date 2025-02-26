@@ -53,19 +53,3 @@ def create_payment():
         print("Невідомий тип платежу! Спробуйте ще раз.")
         return None
     
-    
-payments = []
-
-# Створюємо кілька платежів вручну
-payments.append(CreditCardPayment("USD"))
-payments.append(PayPalPayment("EUR"))
-payments.append(CryptoPayment("BTC"))
-
-# Додаємо платіж, який створює користувач
-user_payment = create_payment()
-if user_payment:
-    payments.append(user_payment)
-
-# Викликаємо метод pay() для кожного платежу
-for payment in payments:
-    payment.pay(100)  # Наприклад, оплата 100 одиниць валюти
